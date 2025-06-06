@@ -8,4 +8,4 @@ pipelines:
           - git config --global user.name "Bitbucket Sync Bot"
           - git clone --mirror https://navivarma@bitbucket.org/bhshilpa2/trace_sample.git bitbucket-mirror
           - cd bitbucket-mirror
-          - git push --mirror https://x-access-token:${GITHUB_TOKEN}@github.com/bhshilpa2708/trace_sample.git
+          - git push --mirror https://x-access-token:{GITHUB_TOKEN}@github.com/bhshilpa2708/trace_sample.git
