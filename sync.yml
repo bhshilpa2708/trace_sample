@@ -1,0 +1,10 @@
+pipelines:
+  default:
+    - step:
+        name: Sync to GitHub
+        image: alpine/git
+        script:
+          - git clone --mirror https://x-token-auth:$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@https://github.com/bhshilpa2708/trace_sample.git github-mirror
+          - git clone --mirror https://bhshilpa2708@bitbucket.org/procaltech/trace_sample.git bitbucket-mirror
+          - cd bitbucket-mirror
+          - git push --mirror https://x-token-auth:$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@https://github.com/bhshilpa2708/trace_sample.git
