@@ -1,7 +1,13 @@
 pipelines:
   default:
     - step:
-        name: Sync Bitbucket to GitHub
+        name: Build & Test
+        image: node:16
+        script:
+          - echo "✅ Build or test tasks here"
+    - step:
+        name: ✅ Approve & Push to GitHub
+        trigger: manual
         image: alpine/git
         script:
           - git config --global user.email "sync@bitbucket.com"
